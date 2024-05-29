@@ -1,0 +1,7 @@
+{
+  "name": "CoinkRegisterApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
