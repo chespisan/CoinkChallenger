@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { WelcomePageRoutingModule } from './welcome-routing.module';
 
 import { WelcomePage } from './welcome.page';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    WelcomePageRoutingModule
+    WelcomePageRoutingModule,
+    SharedModule,
   ],
-  declarations: [WelcomePage]
+  declarations: [WelcomePage],
 })
 export class WelcomePageModule {}

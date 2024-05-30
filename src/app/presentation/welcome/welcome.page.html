@@ -1,13 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>welcome</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">welcome</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="welcome-content">
+    <div class="welcome-content__logo">
+      <ion-icon
+        class="welcome-content__img"
+        src="assets/logo/logo-coink.svg"
+        alt="logo-coink"
+      />
+
+      <h1 class="welcome-content__text">
+        LA ALCANCÍA QUE SIEMPRE <br />
+        TE ACOMPAÑA
+      </h1>
+    </div>
+
+    <div class="welcome-content__actions">
+      <app-button color="primary" text="REGÍSTRATE" expand="full"></app-button>
+      <app-button color="secondary" text="INGRESA" expand="full"></app-button>
+    </div>
+  </div>
 </ion-content>

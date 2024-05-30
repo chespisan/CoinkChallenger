@@ -1,0 +1,39 @@
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  width: 100%;
+
+  padding: var(--ion-padding-25);
+
+  &__logo {
+    flex: 1 1 auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 48px;
+    height: auto;
+  }
+
+  &__img {
+    font-size: 160px;
+  }
+
+  &__text {
+    color: var(--ion-color-primary);
+    font-size: var(--ion-font-size-md);
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__actions {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+  }
+}
