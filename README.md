@@ -6,9 +6,6 @@ Challenger Coink - App de registro
 - Ionic
 - Angular
 
-Deberan crear un .env con las siguientes variables
-
-
 
 ## Installation
 
