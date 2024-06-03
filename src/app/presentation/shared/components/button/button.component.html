@@ -1,7 +1,19 @@
 <ion-button
-  class="button button--{{ color }}"
-  expand="{{ expand }}"
+  class="button button--{{ disabled ? 'disabled' : color }}"
   mode="ios"
-  shape="round"
-  >{{ text }}</ion-button
+  shape="{{ shape }}"
+  expand="{{ expand }}"
+  fill="{{ fill }}"
+  size="{{ size }}"
+  [disabled]="disabled"
+  (click)="onClick()"
 >
+  <ion-icon
+    *ngIf="type === 'icon'"
+    slot="icon-only"
+    class="button__icon-pad{{ typeName === 'Backspace' ? '--lg' : '--md' }}"
+    src="assets/icon/{{ typeName }}.svg"
+    alt="icon-pad"
+  />
+  {{ text }}
+</ion-button>

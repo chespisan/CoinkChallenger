@@ -1,1 +1,1 @@
-export type TButtonColor = 'primary' | 'secondary';
+export type TButtonColor = 'primary' | 'secondary' | 'light' | 'dark';

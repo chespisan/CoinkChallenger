@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { TButtonColor } from './button.interface';
 
 @Component({
@@ -8,10 +8,22 @@ import { TButtonColor } from './button.interface';
 })
 export class ButtonComponent implements OnInit {
   @Input() text!: string;
-  @Input() color!: TButtonColor;
+  @Input() color!: string;
   @Input() expand!: string;
+  @Input() type?: string;
+  @Input() typeName?: string;
+  @Input() size?: string;
+  @Input() fill?: string = 'solid';
+  @Input() shape?: string = 'round';
+  @Input() disabled?: boolean;
+  @Input() callbackFunction!: any;
+  @Output() onAction = new EventEmitter();
 
   constructor() {}
 
   ngOnInit() {}
+
+  onClick() {
+    this.onAction.emit();
+  }
 }

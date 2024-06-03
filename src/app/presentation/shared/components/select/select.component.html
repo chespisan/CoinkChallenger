@@ -1,0 +1,15 @@
+<ion-item>
+  <ion-select
+    label-placement="floating"
+    [formControl]="control"
+    [label]="label"
+    [compareWith]="compareWith"
+    (ionChange)="handleChange($event)"
+  >
+    <ion-select-option
+      *ngFor="let item of options; trackBy: trackItems"
+      [value]="item.notation"
+      >{{ item.description }}</ion-select-option
+    >
+  </ion-select>
+</ion-item>

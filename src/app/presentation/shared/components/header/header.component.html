@@ -1,0 +1,32 @@
+<div class="header">
+  <div class="header__box-arrow-back">
+    <ion-buttons slot="start">
+      <ion-button
+        size="large"
+        color="primary"
+        expand="full"
+        (click)="onAction()"
+      >
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+  <ion-title class="header__title" text-center> {{ title }} </ion-title>
+
+  <div class="header__box-radio">
+    <ion-radio-group [value]="indexRadio" [allowEmptySelection]="true">
+      <ion-radio value="0" aria-label="Custom checkbox"></ion-radio>
+      <hr class="header__spacebar" />
+      <ion-radio
+        value="1"
+        aria-label="Custom checkbox that is checked"
+      ></ion-radio>
+      <hr class="header__spacebar" />
+
+      <ion-radio
+        value="2"
+        aria-label="Custom checkbox that is checked"
+      ></ion-radio>
+    </ion-radio-group>
+  </div>
+</div>
