@@ -6,3 +6,9 @@ export interface IColors {
   textLight: string;
   textDark: string;
 }
+
+export interface ITypeOptions {
+  id: number;
+  description: string;
+  notation?: string;
+}

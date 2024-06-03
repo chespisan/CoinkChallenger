@@ -7,8 +7,8 @@ export interface RegisterEntity {
   gender: string;
   email: string;
   emailConfirmation: string;
-  pin: number;
-  pinConfirm: string;
+  password: number;
+  passwordConfirm: string;
   terms: boolean;
 }
 
