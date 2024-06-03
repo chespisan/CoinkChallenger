@@ -1,0 +1,24 @@
+<ion-item>
+  <ion-input
+    labelPlacement="stacked"
+    [placeholder]="placeholder"
+    [type]="type"
+    [formControl]="control"
+    type="password"
+  >
+    <ion-button
+      *ngIf="isPassword"
+      fill="clear"
+      slot="end"
+      aria-label="Show/hide"
+      (click)="showOrHidePassword()"
+    >
+      <ion-icon
+        color="secondary"
+        slot="icon-only"
+        [name]="hide ? 'eye' : 'eye-off'"
+        aria-hidden="true"
+      ></ion-icon>
+    </ion-button>
+  </ion-input>
+</ion-item>

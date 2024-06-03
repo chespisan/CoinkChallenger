@@ -1,0 +1,27 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <app-header
+      [title]="headerText"
+      [indexRadio]="currentIndex"
+      (action)="goBack()"
+    ></app-header>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <swiper-container
+    #swiper
+    [allowTouchMove]="false"
+    (swiperslidechange)="swiperSlideChanged($event)"
+  >
+    <swiper-slide>
+      <app-step-one (action)="actionStepOne($event)"></app-step-one>
+    </swiper-slide>
+    <swiper-slide>
+      <app-step-two (action)="actionStepTwo($event)"></app-step-two>
+    </swiper-slide>
+    <swiper-slide>
+      <app-step-three (action)="actionStepThree($event)"></app-step-three>
+    </swiper-slide>
+  </swiper-container>
+</ion-content>

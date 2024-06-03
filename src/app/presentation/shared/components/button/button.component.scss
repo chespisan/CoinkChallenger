@@ -1,0 +1,37 @@
+.button {
+  --background-hover: #6bd1af;
+  --background-activated: #6bd1af;
+  --background-focused: #6bd1af;
+  font-weight: bold;
+
+  &--primary {
+    --color: var(--ion-color-secondary);
+    --color-activated: var(--ion-color-white);
+    --color-hover: var(--ion-color-white);
+  }
+
+  &--secondary {
+    --background: var(--ion-color-secondary);
+  }
+
+  &--light {
+    --background: var(--ion-color-light);
+  }
+
+  &--dark {
+    --background: var(--ion-color-dark);
+  }
+
+  &--disabled {
+    --background: var(--ion-color-light);
+    --color: var(--ion-color-dark);
+  }
+
+  &__icon-pad--md {
+    font-size: 25px;
+  }
+
+  &__icon-pad--lg {
+    font-size: 56px;
+  }
+}

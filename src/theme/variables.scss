@@ -1,2 +1,41 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+:root {
+  // COLORS //
+  --ion-color-primary: #1dea03;
+  --ion-color-secondary: #004b40;
+  --ion-color-danger: #ff0808;
+  --ion-color-white: #fff;
+  --ion-color-text: #000;
+  --ion-color-text-light: #d3d3d3;
+  --ion-color-text-clear-light: #fafafa;
+  --ion-color-text-dark: #757575;
+
+  // STRCUTURE //
+  --ion-margin-5: 5px;
+  --ion-margin-10: 10px;
+  --ion-margin-15: 15px;
+  --ion-margin-25: 25px;
+  --ion-margin-35: 35px;
+
+  --ion-padding-5: 5px;
+  --ion-padding-10: 10px;
+  --ion-padding-15: 15px;
+  --ion-padding-20: 20px;
+  --ion-padding-25: 25px;
+  --ion-padding-40: 40px;
+  --ion-padding-50: 50px;
+  --ion-padding-60: 60px;
+  --ion-padding-70: 70px;
+
+  --ion-border-radius-5: 5;
+  --ion-border-radius-10: 10;
+  --ion-border-radius-15: 15;
+  --ion-border-radius-20: 20;
+
+  --ion-font-size-xsm: 14px;
+  --ion-font-size-sm: 16px;
+  --ion-font-size-md: 20px;
+  --ion-font-size-lg: 28px;
+  --ion-font-size-xl: 32px;
+  --ion-font-size-xxl: 36px;
+  --ion-font-size-xxxl: 42px;
+}

@@ -1,0 +1,32 @@
+.account-details {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  &__box-form {
+    padding-bottom: var(--ion-padding-25);
+    width: 100%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title-form {
+    color: var(--ion-color-secondary);
+    font-weight: bold;
+    margin: 16px 0;
+  }
+
+  &__form-error {
+    color: var(--ion-color-danger);
+    font-size: var(--ion-font-size-xsm);
+    margin-left: 16px;
+  }
+
+  &__action-box {
+    padding: var(--ion-padding-20) 0;
+  }
+}

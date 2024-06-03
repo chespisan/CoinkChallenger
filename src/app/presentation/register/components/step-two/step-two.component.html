@@ -1,0 +1,157 @@
+<div class="account-details">
+  <app-header-steps
+    title="¿CUÁLES SON TUS DATOS?"
+    text="Ahora necesitamos saber algunos datos tuyos"
+  ></app-header-steps>
+
+  <div class="account-details__box-form">
+    <form class="account-details__form" [formGroup]="form">
+      <h5 class="account-details__title-form">Documento de identidad</h5>
+
+      <div>
+        <app-select
+          label="Tipo de documento"
+          [options]="documentTypes"
+          [control]="form.controls.typeDocument"
+        ></app-select>
+      </div>
+
+      <div>
+        <app-input
+          [control]="form.controls.numberDocument"
+          placeholder="Número de documento"
+          label="Email"
+        ></app-input>
+        <div
+          class="account-details__form-error"
+          *ngIf="form.controls.numberDocument.touched && form.controls.numberDocument.errors?.['required']"
+        >
+          El número de documento es requerido
+        </div>
+      </div>
+
+      <div>
+        <app-input
+          [control]="form.controls.expeditionDate"
+          placeholder="Fecha de expedición del documento"
+          label="Email"
+        ></app-input>
+        <div
+          class="account-details__form-error"
+          *ngIf="form.controls.expeditionDate.touched && form.controls.expeditionDate.errors?.['required']"
+        >
+          La fecha de expedición es requerida
+        </div>
+      </div>
+
+      <div>
+        <app-input
+          [control]="form.controls.date"
+          placeholder="Fecha de nacimiento"
+          label="Email"
+        ></app-input>
+        <div
+          class="account-details__form-error"
+          *ngIf="form.controls.date.touched && form.controls.date.errors?.['required']"
+        >
+          La fecha de nacimiento es requerida
+        </div>
+      </div>
+
+      <app-select
+        label="Genero"
+        [options]="gendersOptions"
+        [control]="form.controls.gender"
+      ></app-select>
+
+      <h5 class="account-details__title-form">Configura tu cuenta</h5>
+
+      <div>
+        <app-input
+          [control]="form.controls.email"
+          placeholder="Correo electrónico"
+          label="Email"
+        ></app-input>
+        <div
+          class="account-details__form-error"
+          *ngIf="form.controls.email.touched && form.controls.email.errors?.['required']"
+        >
+          El Email es requerido
+        </div>
+
+        <div
+          class="account-details__form-error"
+          *ngIf="form.controls.email.errors?.['email'] && form.controls.email.touched"
+        >
+          El Email no es valido
+        </div>
+      </div>
+
+      <div>
+        <app-input
+          [control]="form.controls.emailConfirmation"
+          placeholder="confirmar correo electrónico"
+          label="Email"
+        ></app-input>
+        <div
+          class="account-details__form-error"
+          *ngIf="form.controls.emailConfirmation.touched && form.errors?.['EmailNoMatch']"
+        >
+          Este campo no coincide con el Email
+        </div>
+        <div
+          class="account-details__form-error"
+          *ngIf="form.controls.emailConfirmation.errors?.['email'] && form.controls.emailConfirmation.touched"
+        >
+          El Email no es valido
+        </div>
+      </div>
+
+      <div>
+        <app-input
+          [control]="form.controls.password"
+          placeholder="PIN de seguridad"
+          label="Email"
+          type="password"
+        ></app-input>
+        <div
+          class="account-details__form-error"
+          *ngIf="form.controls.password.touched && form.controls.password.errors?.['required']"
+        >
+          EL PIN es requerido
+        </div>
+      </div>
+
+      <div>
+        <app-input
+          [control]="form.controls.passwordConfirmation"
+          placeholder="Confirmar PIN de seguridad"
+          label="Email"
+          type="password"
+        ></app-input>
+        <div
+          class="account-details__form-error"
+          *ngIf="form.controls.passwordConfirmation.touched && form.errors?.['PasswordNoMatch']"
+        >
+          Este campo no coincide con el PIN
+        </div>
+        <div
+          class="account-details__form-error"
+          *ngIf="form.controls.passwordConfirmation.touched && form.controls.passwordConfirmation.errors?.['required']"
+        >
+          Este campo es requerido
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="account-details__action-box">
+    <app-button
+      expand="full"
+      text="SIGUIENTE"
+      color="primary"
+      [disabled]="form.invalid"
+      (click)="submit()"
+    ></app-button>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+ion-title {
+  text-align: center;
+}
+
+ion-radio.ios::part(container) {
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid #ddd;
+  border-radius: 4px;
+}
+
+ion-radio-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  padding: var(--ion-padding-10);
+
+  &__box-arrow-back {
+    position: absolute;
+    left: 0;
+  }
+
+  &__title {
+    color: var(--ion-color-secondary);
+    font-size: var(--ion-font-size-md);
+    font-weight: bold;
+  }
+
+  &__spacebar {
+    background-color: var(--ion-color-text-dark);
+    height: 1px;
+    width: 50px;
+  }
+}
