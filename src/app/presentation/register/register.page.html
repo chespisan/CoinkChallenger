@@ -1,13 +1,27 @@
-<ion-header [translucent]="true">
+<ion-header mode="md">
   <ion-toolbar>
-    <ion-title>register</ion-title>
+    <app-header
+      [title]="headerText"
+      [indexRadio]="currentIndex"
+      (action)="goBack()"
+    ></app-header>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <swiper-container
+    #swiper
+    [allowTouchMove]="false"
+    (swiperslidechange)="swiperSlideChanged($event)"
+  >
+    <swiper-slide>
+      <app-step-one (action)="actionStepOne($event)"></app-step-one>
+    </swiper-slide>
+    <swiper-slide>
+      <app-step-two (action)="actionStepTwo($event)"></app-step-two>
+    </swiper-slide>
+    <swiper-slide>
+      <app-step-three (action)="actionStepThree($event)"></app-step-three>
+    </swiper-slide>
+  </swiper-container>
 </ion-content>
