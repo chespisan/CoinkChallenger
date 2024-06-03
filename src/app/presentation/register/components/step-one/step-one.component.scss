@@ -1,0 +1,44 @@
+.number-pad {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  &__box-number-phone {
+    background-color: var(--ion-color-text-clear-light);
+    font-size: var(--ion-font-size-sm);
+    padding: var(--ion-padding-15);
+    text-align: center;
+
+    -webkit-box-shadow: 3px 6px 8px -5px rgba(211, 211, 211, 1);
+    -moz-box-shadow: 3px 6px 8px -5px rgba(211, 211, 211, 1);
+    box-shadow: 3px 6px 8px -5px rgba(211, 211, 211, 1);
+  }
+
+  &__text-number-phone {
+    font-size: var(--ion-font-size-lg);
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 12px;
+
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 80px;
+    width: 100px;
+  }
+
+  &__backspace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

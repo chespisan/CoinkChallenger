@@ -1,0 +1,29 @@
+ion-checkbox {
+  color: var(--ion-color-secondary);
+}
+
+.terms {
+  &__title-info {
+    color: var(--ion-color-secondary);
+    font-size: var(--ion-font-size-sm);
+    font-weight: bold;
+  }
+
+  &__text-info {
+    color: var(--ion-color-text-dark);
+    font-size: var(--ion-font-size-xsm);
+  }
+
+  &__box-link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin: var(--ion-margin-35) 0;
+  }
+
+  &__link {
+    color: var(--ion-color-secondary);
+    font-weight: bold;
+  }
+}

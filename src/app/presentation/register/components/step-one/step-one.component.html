@@ -1,0 +1,54 @@
+<div class="number-pad">
+  <app-header-steps
+    text="Para comenzar, por favor 
+ingresatu número celular"
+  ></app-header-steps>
+
+  <div class="number-pad__box-number-phone">
+    <p class="number-pad__text-number-phone" *ngIf="boxText === ''">
+      (XXX - XXXXXXX)
+    </p>
+    <p class="number-pad__text-number-phone">{{ boxText }}</p>
+  </div>
+
+  <div class="number-pad__table">
+    <div
+      class="number-pad__number"
+      *ngFor="let number of numberPadItems; trackBy: trackItems"
+    >
+      <app-button-pad
+        *ngIf="number?.text"
+        text="{{ number.text }}"
+        (onAction)="onPressNumberPad(number.text)"
+      />
+
+      <div
+        class="number-pad__backspace"
+        *ngIf="number?.params && number?.params?.type === 'backspace'"
+      >
+        <app-button
+          color="primary"
+          text=""
+          expand="full"
+          fill="clear"
+          type="icon"
+          typeName="Backspace"
+          shape="default"
+          (onAction)="onBackspace()"
+        />
+      </div>
+
+      <div *ngIf="number?.params && number?.params?.type === 'check'">
+        <app-button
+          color="{{ isCheckStepOne ? 'primary' : 'light' }}"
+          text=""
+          expand="full"
+          type="icon"
+          typeName="Check"
+          size="large"
+          (onAction)="onCheck()"
+        />
+      </div>
+    </div>
+  </div>
+</div>
