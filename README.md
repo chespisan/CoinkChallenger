@@ -2,6 +2,10 @@
 
 ## Description
 
+la implementacion de una App(Register) desarrollada en Ionic & junto con Angular, consta de un screen de bienvenida junto aun register por pasos finalizando con un log del registro.
+
+Diseñado y desarrollado con un enfoque de arquitectura hexagonal-clean utilizando principios y patrones de diseño, organizado su scaffolding por capas y separando la logica de negocio.
+
 Challenger Coink - App de registro
 - Ionic
 - Angular
